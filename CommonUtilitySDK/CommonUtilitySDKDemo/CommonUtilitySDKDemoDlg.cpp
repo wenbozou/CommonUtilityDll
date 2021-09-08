@@ -10,6 +10,7 @@
 
 
 #include "InitLogerSDK.h"
+#include "StringConversion.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -105,6 +106,8 @@ BOOL CCommonUtilitySDKDemoDlg::OnInitDialog()
 	// TODO: 在此添加额外的初始化代码
 	WriteLogA("Demo", "Hello World!");
 	ReleaseLoger();
+
+	CommonUtilitySDK::CStringConversion* pStrConver = new CommonUtilitySDK::CStringConversion();
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
